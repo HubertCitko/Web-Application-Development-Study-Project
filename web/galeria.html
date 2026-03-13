@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>WAI Moje Hobby</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+        <script>
+        $( function() {
+          $( "#dialog" ).dialog();
+        } );
+        
+        </script>
+      </head>
+      <body>
+        <div class="gradientBaner">
+            
+            <header>
+                    <a class="logo" href="index.html">Hubert Citko</a>  
+                    <img class="logo" src="logo.svg" style="height: 50px; width: 50px;left: 150px;" alt="logo">
+                    <nav class="nav-links">
+                        
+                        <menu>
+                              
+                            <li><a href="index.html" class="hoverable">Home</a></li>
+                            <li><a href="Recenzje.html" class="hoverable">Recenzje</a></li>
+                            <li><a style="color: #150050;">Galeria</a></li>
+                            <li class="dropdown">
+                                <a href="#">Konto</a>
+                                <ul class="dropdown-content">
+                                    <li class="hoverable"><a href="login.html" >Zaloguj</a></li>
+                                    <li class="hoverable"><a href="register.html">Zarejestruj</a></li>
+                                </ul>
+                            </li>
+                        </menu>
+                    </nav>
+            </header>
+            <div style="width: 20%; margin: auto; padding: 10px 10px; align-content: center;">
+                <form action="/upload" method="post" enctype="multipart/form-data" style="margin: auto; align-content: center;">
+                    <div>
+                        <label for="watermark">Znak wodny:</label>
+                        <input type="text" name="watermark" id="watermark" required>
+                    </div>
+                    <div>
+                        <input type="file" name="photo" accept=".jpg,.jpeg,.png" required>
+                        
+                        <button type="submit" name="submit">Upload</button>
+                    </div>
+                </form>
+            </div>
+            <!--
+            <div id="jsItem" style="display: none;" title="Galeria">
+                    <p>Naciśnij na obrazek aby go powiększyć</p>
+                </div>
+            -->
+                
+                
+            
+            <div id="list" >
+                <img class="zoomPoster" src="images/image1.jpg" alt="">
+                <img class="zoomPoster" src="images/image2.jpg" alt="">
+                <img class="zoomPoster" src="images/image3.jpg" alt="">
+                <img class="zoomPoster" src="images/image4.jpg" alt="">
+                <img class="zoomPoster" src="images/image5.jpg" alt="">
+                <img class="zoomPoster" src="images/image6.jpg" alt="">
+                <img class="zoomPoster" src="images/image7.jpg" alt="">
+                <img class="zoomPoster" src="images/image8.jpg" alt="">
+             </div>
+             
+        </div>
+
+        <div id="modal" class="modal">
+            <span id="close">×</span>
+            <img src="data:," class="modal-content" id="modalImg" alt="">
+        </div> 
+        <script src="script.js"></script>
+        <footer>
+            <div style="background-color: #150050;">
+                <p style="color: #fff; font-weight: 200;">&copy; Hubert Citko 1B 203160 - większość tekstu została wygenerowana przez AI</p>
+                <p style="color: #fff; font-weight: 200;">Email kontaktowy: <a href="mailto:s203160@student.pg.edu.pl" style="color: #610094;">s203160@student.pg.edu.pl</a></p>
+            </div>
+        </footer>
+        
+    </body>
+    
+
+</html>

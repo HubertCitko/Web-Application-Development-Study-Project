@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Konto</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+            $( document ).tooltip();
+        } );
+        </script>
+        <style>
+            @media only screen and (min-width:851px)
+            {
+                .banner{
+                    height: 200vh;
+                }
+            }
+            @media only screen and (max-width:850px)
+            {
+                .banner{
+                    height: 220vh;
+                }
+            }
+
+        </style>
+</head>
+
+<body>
+    <div class="banner">
+        <header>
+                <a class="logo" href="index.html">Hubert Citko</a>    
+                <img class="logo" src="logo.svg" style="height: 50px; width: 50px;left: 150px;" alt="logo">
+                <nav class="nav-links">
+                    
+                    <menu>
+                        
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Recenzje.html">Recenzje</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a style="color: #150050;">Konto</a></li>
+                        
+                    </menu>
+
+                </nav>
+        </header>
+        <div class="login_register_background" style="height: 65%;">
+            
+                <h1>Zarejestruj się</h1>
+                <form method="post" action="odbierz.php">
+
+                    <label for="name">Imię:</label>
+                    <div class="wraper">
+                        <input placeholder="..." type="text" id="name" name="name" required>
+                    </div>
+
+                    <label for="surname">Nazwisko:</label>
+                    <div class="wraper">
+                        <input placeholder="..." type="text" id="surname" name="surname" required>
+                    </div>
+
+                    <div style="color: #fff; padding: 20px 0; font-weight: 400;width: 100%;"></div>
+
+                    <div class="wraper" style="width: 50%; padding: 10px;">
+                        <input title ="Podaj swój email" placeholder="Email" type="text"  name="email" required>
+                    </div>
+
+                    <div class="wraper" style="width: 50%; padding: 10px;">
+                        <input title ="Podaj swoje hasło" placeholder="Password" type="password" name="password" required>
+                    </div>
+
+                    <label style="padding: 20px 0;">Płeć:</label>
+                    <div style="width: 100%; height: 30px; display: flex; flex-direction: row;align-items: center; justify-content: space-evenly;">
+                        <div class="checkButtonHolder">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label class="radioButton" for="male">Mężczyzna</label>
+                        </div>
+                        <div class="checkButtonHolder">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label class="radioButton" for="female">Kobieta</label>
+                        </div>
+                    </div>
+
+                    <label for="voivodeships" style="padding: 20px 0;">Województwo:</label>
+                    <div class="selectContainer">
+                        <select id="voivodeships" name="voivodeships">
+                        <option value="dolnoslaskie">Dolnośląskie</option>
+                            <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+                            <option value="lubelskie">Lubelskie</option>
+                            <option value="lubuskie">Lubuskie</option>
+                            <option value="lodzkie">Łódzkie</option>
+                            <option value="malopolskie">Małopolskie</option>
+                            <option value="mazowieckie">Mazowieckie</option>
+                            <option value="opolskie">Opolskie</option>
+                            <option value="podkarpackie">Podkarpackie</option>
+                            <option value="podlaskie">Podlaskie</option>
+                            <option value="pomorskie">Pomorskie</option>
+                            <option value="slaskie">Śląskie</option>
+                            <option value="swietokrzyskie">Świętokrzyskie</option>
+                            <option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+                            <option value="wielkopolskie">Wielkopolskie</option>
+                            <option value="zachodniopomorskie">Zachodniopomorskie</option>
+                        </select>
+                    </div>
+                <label style="padding: 20px 0;">Jakie rodzaje filmów cię interesują?:</label>
+                    <div class="checkboxsContainer">
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="action" name="genre" value="action">
+                            <label style="font-size: 16px;" for="action">Akcja</label>
+                        </div>
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="comedy" name="genre" value="comedy">
+                            <label style="font-size: 16px;" for="comedy">Komedia</label>
+                        </div>
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="drama" name="genre" value="drama">
+                            <label style="font-size: 16px;" for="drama">Dramat</label>
+                        </div>
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="horror" name="genre" value="horror">
+                            <label style="font-size: 16px;" for="horror">Horror</label>
+                        </div>
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="thriller" name="genre" value="thriller">
+                            <label style="font-size: 16px;" for="thriller">Thriller</label>
+                        </div>  
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="romance" name="genre" value="romance">
+                            <label style="font-size: 16px;" for="romance">Romans</label>
+                        </div>  
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="scifi" name="genre" value="scifi">
+                            <label style="font-size: 16px;" for="scifi">Science Fiction</label>
+                        </div>
+                        <div class="checkButtonHolder">
+                            <input type="checkbox" id="documentary" name="genre" value="documentary">
+                            <label style="font-size: 16px;" for="documentary">Dokumentalny</label>
+                        </div>
+                    </div>
+                    <div style="height: 40px;"></div>
+                    <input style="width: 30%; height: 40px;" type="submit" value="Zarejestruj">
+                    <div style="height: 10px;"></div>
+                    <input style="width: 30%; height: 40px;" type="reset" value="Wyczyść">
+                </form>
+                <div style="height: 40px;"></div>
+                <div style="text-align: center; color: #fff; font-size: 24px; font-weight: 200;">Masz już konto?</div>
+                <div style=" text-align: center; color: #fff; font-size: 24px; font-weight: 200;"><a href="login.html">Zaloguj się tutaj</a></div>
+                
+            </div>
+            <footer style="margin-top: 30vh;">
+                <div style="background-color: #150050;">
+                    <p style="color: #fff; font-weight: 200;">&copy; Hubert Citko 1B 203160 - większość tekstu została wygenerowana przez AI</p>
+                    <p style="color: #fff; font-weight: 200;">Email kontaktowy: <a href="mailto:s203160@student.pg.edu.pl" style="color: #610094;">s203160@student.pg.edu.pl</a></p>
+                </div>
+            </footer>
+    </div>
+
+</body>
+</html>

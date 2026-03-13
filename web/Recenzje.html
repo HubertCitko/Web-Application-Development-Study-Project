@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>WAI Moje Hobby</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+        <script defer src="myScripts.js"></script>
+        <style>
+            @media only screen and (min-width:851px)
+            {
+                .banner{
+                    height: 200vh;
+                }
+                #itemsContainer{
+                    width: 60%;
+                    display: flex;
+                    column-count: 3;
+                    margin: auto; 
+                    height: auto;
+                    padding: 40px 0px;
+                }
+            }
+            @media only screen and (max-width:850px)
+            {
+                .banner{
+                    height: 330vh;
+                }
+                #itemsContainer{
+                    width: 60%;
+                    column-count: 1;
+                    align-items: center;
+                    align-content: center;
+                    
+                    margin: auto; 
+                    height: auto;
+                    padding: 40px 0px;
+                }
+                #itemsContainer img{
+                    width: 100%;
+                }
+                .movieText p{
+                    width: 80%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <header>
+                    <a class="logo" href="index.html">Hubert Citko</a>      
+                    <img class="logo" src="logo.svg" style="height: 50px; width: 50px;left: 150px;" alt="logo">
+                    <nav class="nav-links">
+                        
+                        <menu>
+                            <li><a href="index.html" class="hoverable">Home</a></li>
+                            <li><a style="color: #150050;">Recenzje</a></li>
+                            <li><a href="galeria.html" class="hoverable">Galeria</a></li>
+                            <li class="dropdown">
+                                <a href="#">Konto</a>
+                                <ul class="dropdown-content">
+                                    <li class="hoverable"><a href="login.html" >Zaloguj</a></li>
+                                    <li class="hoverable"><a href="register.html">Zarejestruj</a></li>
+                                </ul>
+                            </li>
+                        </menu>
+                    </nav>
+            </header>         
+            <div id="itemsContainer">
+                <img class="reviewItem notPicked" src="images/image3.jpg" alt="" onclick="pickItem(this,0)">
+                <img class="reviewItem notPicked" src="images/image7.jpg" alt="" onclick="pickItem(this,1)">
+                <img class="reviewItem notPicked" src="images/image4.jpg" alt="" onclick="pickItem(this,2)">
+            </div>
+            <div id="begin" class="movieText niceTextBg">
+                <noscript>
+                    <h1>JavaScript turned off!</h1>
+                    <div>
+                        <p>
+                            If you want to see movie reviews you need to turn on your JavaScript. Here is how you do it:    
+                        </p>
+                        <p>
+                            <a href="https://support.google.com/admanager/answer/12654?hl=en">     Turn on JavaScript</a>
+                        </p>
+                    </div>
+                    
+                </noscript>
+            </div>
+
+
+            </div>  
+    </body>
+</html>

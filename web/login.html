@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Konto</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+        
+        <script>
+        $( function() {
+            $( document ).tooltip();
+        } );
+        </script>
+        <style>
+            @media only screen and (min-width:851px)
+            {
+                .banner{
+                    height: 200vh;
+                }
+            }
+            @media only screen and (max-width:850px)
+            {
+                .banner{
+                    height: 220vh;
+                }
+            }
+
+        </style>
+</head>
+<body>
+    <div class="banner" >
+        <header>
+                <a class="logo" href="index.html">Hubert Citko</a>    
+                <img class="logo" src="logo.svg" style="height: 50px; width: 50px;left: 150px;" alt="logo">
+                <nav class="nav-links">
+                    
+                    <menu>
+                        
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Recenzje.html">Recenzje</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a style="color: #150050;">Konto</a></li>
+                        
+                    </menu>
+
+                </nav>
+        </header>
+        <div class="login_register_background" style="height: 65%;">
+           
+                <h1>Zaloguj się</h1>
+                <form method="get" action="odbierz.php">
+                    <div id="pusher"></div>
+                    <div class="wraper" style="width: 80%; padding: 10px;">
+                        <input title ="Podaj swój email" placeholder="Email" type="text" name="email" required>
+                    </div>
+                    <div class="wraper" style="width: 80%; padding: 10px;">
+                        <div>
+                            <input title ="Podaj swoje hasło" placeholder="Password" type="password" name="password" required>
+                        </div>
+                        
+                    </div>
+                    <div style="height: 40px;"></div>
+                        <input style="width: 30%; height: 40px;" type="submit" value="Zaloguj">
+                    <div style="height: 40px;"></div>
+                </form>
+                <div style="text-align: center; color: #fff; font-size: 24px; font-weight: 200;">Nie masz jeszcze konta?</div>
+                    <div style=" text-align: center; color: #fff; font-size: 24px; font-weight: 200;"><a href="register.html">Zarejestruj się tutaj</a>
+                </div>
+            </div>  
+            <footer style="margin-top: 30vh;">
+                <div style="background-color: #150050;">
+                    <p style="color: #fff; font-weight: 200;">&copy; Hubert Citko 1B 203160 - większość tekstu została wygenerowana przez AI</p>
+                    <p style="color: #fff; font-weight: 200;">Email kontaktowy: <a href="mailto:s203160@student.pg.edu.pl" style="color: #610094;">s203160@student.pg.edu.pl</a></p>
+                </div>
+            </footer>
+        </div>
+
+</body>
+</html>

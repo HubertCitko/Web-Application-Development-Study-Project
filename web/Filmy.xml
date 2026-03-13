@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Filmy SYSTEM "Filmy.dtd">
+<Filmy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FilmySchema.xsd">
+    <Film ID="12345">
+        <Tytul>Incepcja</Tytul>
+        <Rezyser Narodowosc="Brytyjska" Wiek="50">
+            <Imie>Christopher</Imie>
+            <Nazwisko>Nolan</Nazwisko>
+        </Rezyser>
+        <RokProdukcji>2010</RokProdukcji>
+        <Gatunek>Sci-Fi</Gatunek>
+        <Ocena>9.0</Ocena>
+        <Aktorzy>
+            <Aktor Nagrodzony="true" Wiek="45">
+                <DaneAktora>
+                    <Imie>Leonardo</Imie>
+                    <Nazwisko>DiCaprio</Nazwisko>
+                </DaneAktora>
+                <NazwaRoli>Dom Cobb</NazwaRoli>
+                <Zdjecie>https://example.com/leonardo.jpg</Zdjecie>
+                <Link>https://www.imdb.com/name/nm0000138/</Link>
+            </Aktor>
+            <Aktor Nagrodzony="false" Wiek="40">
+                <DaneAktora>
+                    <Imie>Joseph</Imie>
+                    <Nazwisko>Gordon-Levitt</Nazwisko>
+                </DaneAktora>
+                <NazwaRoli>Arthur</NazwaRoli>
+                <Zdjecie>https://example.com/joseph.jpg</Zdjecie>
+                <Link>https://www.imdb.com/name/nm0330687/</Link>
+            </Aktor>
+            <Aktor Nagrodzony="true" Wiek="36">
+                <DaneAktora>
+                    <Imie>Elliot</Imie>
+                    <Nazwisko>Page</Nazwisko>
+                </DaneAktora>
+                <NazwaRoli>Ariadne</NazwaRoli>
+                <Zdjecie>https://example.com/elliot.jpg</Zdjecie>
+                <Link>https://www.imdb.com/name/nm0680983/</Link>
+            </Aktor>
+        </Aktorzy>
+        <CzasTrwaniaWMinutach>148</CzasTrwaniaWMinutach>
+        <Formaty>Blu-ray DVD Streaming</Formaty>
+        <StudioProdukcji>
+            <Nazwa>Warner Bros.</Nazwa>
+            <Miasto>Burbank</Miasto>
+            <Kraj>USA</Kraj>
+        </StudioProdukcji>
+    </Film>
+    <Film ID="67890">
+        <Tytul>Avatar</Tytul>
+        <Rezyser Narodowosc="Kanadyjska" Wiek="69">
+            <Imie>James</Imie>
+            <Nazwisko>Cameron</Nazwisko>
+        </Rezyser>
+        <RokProdukcji>2009</RokProdukcji>
+        <Gatunek>Sci-Fi</Gatunek>
+        <Ocena>8.5</Ocena>
+        <Aktorzy>
+            <Aktor Nagrodzony="false" Wiek="48">
+                <DaneAktora>
+                    <Imie>Sam</Imie>
+                    <Nazwisko>Worthington</Nazwisko>
+                </DaneAktora>
+                <NazwaRoli>Jake Sully</NazwaRoli>
+                <Zdjecie>https://example.com/sam.jpg</Zdjecie>
+                <Link>https://www.imdb.com/name/nm0941777/</Link>
+            </Aktor>
+        </Aktorzy>
+        <CzasTrwaniaWMinutach>162</CzasTrwaniaWMinutach>
+        <Formaty>Blu-ray Streaming</Formaty>
+        <StudioProdukcji>
+            <Nazwa>20th Century Fox</Nazwa>
+            <Miasto>Los Angeles</Miasto>
+            <Kraj>USA</Kraj>
+        </StudioProdukcji>
+    </Film>
+    <Film ID="54321">
+        <Tytul>Shrek</Tytul>
+        <Rezyser Narodowosc="Amerykańska" Wiek="60">
+            <Imie>Andrew</Imie>
+            <Nazwisko>Adamson</Nazwisko>
+        </Rezyser>
+        <RokProdukcji>2001</RokProdukcji>
+        <Gatunek>Comedy</Gatunek>
+        <Ocena>8.0</Ocena>
+        <Aktorzy>
+            <Aktor Nagrodzony="false" Wiek="65">
+                <DaneAktora>
+                    <Imie>Mike</Imie>
+                    <Nazwisko>Myers</Nazwisko>
+                </DaneAktora>
+                <NazwaRoli>Shrek</NazwaRoli>
+                <Zdjecie>https://example.com/mike.jpg</Zdjecie>
+                <Link>https://www.imdb.com/name/nm0000196/</Link>
+            </Aktor>
+        </Aktorzy>
+        <CzasTrwaniaWMinutach>90</CzasTrwaniaWMinutach>
+        <Formaty>DVD VHS</Formaty>
+        <StudioProdukcji>
+            <Nazwa>DreamWorks</Nazwa>
+            <Miasto>Glendale</Miasto>
+            <Kraj>USA</Kraj>
+        </StudioProdukcji>
+    </Film>
+</Filmy>

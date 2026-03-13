@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Filmy" type="FilmListType"/>
+    <xs:complexType name="FilmType">
+        <xs:sequence>
+            <xs:element name="Tytul" type="TitleType"/>
+            <xs:element name="Rezyser" type="PersonType"/>
+            <xs:element name="RokProdukcji" type="YearType"/>
+            <xs:element name="Gatunek" type="GenreType"/>
+            <xs:element name="Ocena">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="10"/>
+                        <xs:fractionDigits value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Aktorzy" type="ActorsType"/>
+            <xs:element name="CzasTrwaniaWMinutach" type="DurationType"/>
+            <xs:element name="Formaty" type="FormatListType"/> 
+        </xs:sequence>
+        <xs:attribute name="ID" type="CustomIDType" use="required"/>
+    </xs:complexType>
+    <xs:group name="PersonDetailsGroup">
+        <xs:sequence>
+            <xs:element name="Imie" type="xs:string"/>
+            <xs:element name="Nazwisko" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="PersonType">
+        <xs:sequence>
+            <xs:group ref="PersonDetailsGroup"/>
+        </xs:sequence>
+        <xs:attribute name="Narodowosc" type="xs:string"/>
+        <xs:attribute ref="Wiek"/>
+    </xs:complexType>
+
+
+    <xs:complexType name="ActorsType">
+        <xs:choice>
+            <xs:element name="Aktor" type="ActorType" maxOccurs="unbounded"/>
+            <xs:element name="BrakAktorow" type="xs:string" fixed="Nieznani aktorzy"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="ActorType">
+        <xs:sequence>
+            <xs:element name="DaneAktora">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Imie" type="xs:string"/>
+                        <xs:element name="Nazwisko" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="NazwaRoli" type="xs:string"/>
+            <xs:element name="Zdjecie" type="xs:anyURI"/>
+            <xs:element name="Link" type="xs:anyURI"/> 
+            
+        </xs:sequence>
+        <xs:attribute name="Nagrodzony" type="xs:boolean"/>
+        <xs:attribute ref="Wiek"/>
+        
+    </xs:complexType>
+    
+    <xs:complexType name="ExtendedFilmType">
+        <xs:complexContent>
+            <xs:extension base="FilmType">
+                <xs:sequence>
+                    <xs:element name="StudioProdukcji" type="StudioType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name = "StudioType">
+        <xs:sequence>
+            <xs:element name="Nazwa" type="xs:string"/>
+            <xs:element name="Miasto" type="xs:string"/>
+            <xs:element name="Kraj" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+     <xs:simpleType name="YearType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1888"/>
+            <xs:maxInclusive value="2100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DurationType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GenreType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Drama"/>
+            <xs:enumeration value="Comedy"/>
+            <xs:enumeration value="Action"/>
+            <xs:enumeration value="Horror"/>
+            <xs:enumeration value="Sci-Fi"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="TitleType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+
+    <xs:simpleType name="FormatType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Blu-ray"/>
+            <xs:enumeration value="DVD"/>
+            <xs:enumeration value="VHS"/>
+            <xs:enumeration value="Streaming"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="FormatListType">
+        <xs:list itemType="FormatType"/>
+    </xs:simpleType>
+    <xs:simpleType name="CustomIDType">
+        <xs:union memberTypes="xs:string xs:integer"/>
+    </xs:simpleType>
+    <xs:attribute name="Wiek" type="xs:integer"/>
+
+    <xs:complexType name = "FilmListType">
+        <xs:sequence>
+            <xs:element name="Film" type="ExtendedFilmType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
